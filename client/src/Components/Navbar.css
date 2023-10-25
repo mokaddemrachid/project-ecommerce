@@ -1,0 +1,103 @@
+*{
+    background-color: rgb(231, 231, 231);
+}
+
+.header {
+    
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav {
+    background-color: transparent;
+    padding-right: 400px;
+}
+
+.nav a {
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.login-btn {
+    border: 0;
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 13px;
+    font-weight: 500;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    color:black;
+}
+
+.user-btn {
+    border: 0;
+    position: fixed;
+    right: 10px;
+    top: 25px;
+    background-color: transparent;
+}
+
+.dropdown-autoclose-inside{
+    background-color: transparent;
+}
+
+.like-btn {
+    border: 0;
+    position: fixed;
+    right: 90px;
+    top: 5px;
+}
+
+.like-btn a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    fill: red;
+}
+
+.shop-btn {
+    border: 0;
+    position: fixed;
+    right: 115px;
+    top: 5px;
+}
+
+.shop-btn a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.search-area {
+    margin-right: 0px;
+    
+    box-sizing: inherit;
+    border-radius: 10px;
+}
+
+
+
+.search-area input {
+    background-color: rgb(231, 231, 231);
+    border: 0;
+    border-radius: 10px;
+    margin-right: 0;
+}
+

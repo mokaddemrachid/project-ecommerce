@@ -1,0 +1,136 @@
+.footer-container{
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+
+.aboutus{
+    background-color: rgb(0, 0, 0);
+    border-bottom-left-radius: 50px;
+}
+.aboutus h2{
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.aboutus p{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.sci li{
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    align-content: center; 
+    justify-content: center;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    color: black;
+}
+
+.sci li button{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border: none;
+    font-size: large;
+    height: 47px;
+    width: 47px;
+}
+.aide{
+    background-color: black;
+}
+.aide h2{
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.aide ul{
+    margin-top: 20px;
+    display: grid;
+    background-color: black;
+}
+.aide li{
+    list-style: none;
+    background-color: black;
+    text-align: center;
+}
+.aide li a:hover{
+    color: white;
+}
+.aide li a{
+    list-style: none;
+    background-color: black;
+    text-decoration: none;
+    color: gray;
+    
+}
+
+.shop{
+    background-color: black;
+}
+
+.shop h2{
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.shop ul{
+    margin-top: 20px;
+    display: grid;
+    background-color: black;
+}
+.shop li{
+    list-style: none;
+    background-color: black;
+    text-align: center;
+}
+.shop li a:hover{
+    color: white;
+}
+.shop li a{
+    list-style: none;
+    background-color: black;
+    text-decoration: none;
+    color: gray;
+    
+}
+
+.copyright{
+    background-color: rgb(0, 0, 0);
+}
+.copyright p{
+    color: gray;
+    background-color: black;
+    text-align: center;
+}
+
+

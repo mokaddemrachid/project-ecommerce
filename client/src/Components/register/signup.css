@@ -1,0 +1,44 @@
+.signupForm {
+    position: relative;
+    width: 650px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10%;
+    margin-left: 27%;
+    padding-top: 20px;
+    border-radius: 10px;
+}
+
+.signupForm Form {
+    background-color: rgb(255, 255, 255);
+}
+
+.mb-3 {
+    background-color: rgb(255, 255, 255);
+}
+
+.input {
+    border: none;
+    margin-top: 25px;
+}
+
+.signupForm h3 {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.btn {
+    position: absolute;
+    background-color: black;
+    border-color: white;
+    border-radius: 25px;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+}

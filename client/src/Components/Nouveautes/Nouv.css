@@ -1,0 +1,62 @@
+.imagecar{
+    height: 800px;
+    width: 100%;
+}
+.container{
+    margin-top: 125px;
+}
+.secondiv{
+    background-color: white;
+    text-align: center;
+    margin-top: 35px;
+    width: 100%;
+    height: 250px;
+}
+#prag{
+    background-color: white;
+    padding-top: 50px;
+    font-size: large;
+    font-weight: 300;
+}
+#title{
+    background-color: white;
+    font-weight: 900;
+    color: black;
+}
+.nouvbtn:hover{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+.nouvbtn{
+    background-color: black;
+    border-color: white;
+    border-radius: 25px;
+    color: white;
+    font-size: large;
+    height: 45px;
+    width: 110px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+#artitle{
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.divimg{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    height: 630px;
+    margin-top: 0;
+}
+
+
+
+.imgn{
+    width: 400px;
+    height: 630px;
+    margin-left: 5px;
+}
