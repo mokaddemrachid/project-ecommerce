@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { delItem } from '../../redux/action/cartAction';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineDelete } from 'react-icons/ai'
+import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 
 
@@ -13,6 +14,19 @@ export default function Panier({ count }) {
     const products = useSelector((state) => state.addItems) || [];
 
     const dispatch = useDispatch();
+
+    const checkout=()=>{
+      try {
+         axios.post(`http://localhost:7000/create-checkout-session`,{products}).then((res)=>{
+        console.log(res)
+        if(res.data.url){
+          window.location.href=res.data.url
+        }
+      })
+      } catch (error) {
+        console.log(error)
+      }
+    }
 
     const navigate = useNavigate();
 
@@ -81,6 +95,11 @@ export default function Panier({ count }) {
           Prix Totale: {totale}
         </div>
         <button>Continuer</button>
+        <Button 
+      variant="outline-primary"
+      onClick={checkout}>
+        Check Out
+        </Button>{' '}
       </div>
     );
   }

@@ -7,6 +7,6 @@ const Poste = new mongoose.Schema({
     category : String,
     image : String,
     gender : String
-})
+},{timestamps:true})
 
 module.exports = mongoose.model("post", Poste)

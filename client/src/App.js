@@ -13,6 +13,8 @@ import Home from './Components/Home/Home';
 import Panier from './Components/Cart/Panier';
 import Admin from './Components/admin/Admin';
 import Favoris from './Components/Favoris/Favoris';
+import Succes from './Components/Succes';
+import Cancel from './Components/Cancel';
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
             <Route path="/Femme" element={<Femme />}/>
             <Route path="/Enfant" element={<Enfant />}/>
             <Route path="/:id" element={<SingleProduct />} />
+            <Route path='/success' element={<Succes />}/>
+            <Route path='/cancel' element={<Cancel />}/>
         </Routes>
         <Footer />
     </div>
