@@ -13,7 +13,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 
 
-function Navs() {
+function Navs({setSearch}) {
 const dispatch = useDispatch()
 const navigate = useNavigate()
 
@@ -53,8 +53,20 @@ const handleLogout=()=>{
         wrapper="p"
       /> 
     </p>
-    {user?.role === "admin"? <a href="/admin">Admin</a>:<div></div>}
-    { user?.email? <button className='user-btn'> 
+    {/* {<a href="/admin">Admin</a>:<div></div>} */}
+    {user?.role === "admin"? <button className='user-btn'>
+      <Dropdown className="d-inline mx-2" autoClose="inside">
+        <Dropdown.Toggle id="dropdown-autoclose-inside">
+        <BiUser />
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="/admin">Admin</Dropdown.Item>
+          <Dropdown.Item href="#" onClick={handleLogout}>Deconnecter</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      </button>:null}
+    { (user?.email && user?.role ==="user")? <button className='user-btn'> 
       
       <Dropdown className="d-inline mx-2" autoClose="inside">
         <Dropdown.Toggle id="dropdown-autoclose-inside">
@@ -66,8 +78,8 @@ const handleLogout=()=>{
           <Dropdown.Item href="#" onClick={handleLogout}>Deconnecter</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
-      </button>:<a className="login-btn" href='/SignIn'> S'identifier </a>}
-    
+      </button>:null}
+    {!user?.email?<a className="login-btn" href='/SignIn'> S'identifier </a>:null } 
     <NavLink to={'/favoris'}>
     <button className='like-btn'><TfiHeart style={{fill:'red'}}/></button>
     </NavLink>
@@ -81,7 +93,7 @@ const handleLogout=()=>{
            <NavLink to={'/Enfant'}>Enfant</NavLink>
            <div className="search-area">
            <BsSearch />
-          <input type="text" placeholder="Rechercher"></input>
+          <input type="text" placeholder="Rechercher" onChange={(e)=>setSearch(e.target.value)}></input>
            </div>                            
         </nav>
     </header>

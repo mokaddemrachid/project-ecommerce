@@ -60,3 +60,36 @@
     height: 630px;
     margin-left: 5px;
 }
+
+.image-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.image-button {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    width: 200px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.iconbtn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.iconbtn {
+    right: 10px;
+    position: absolute;
+    color: black;
+    background-color: transparent;
+}

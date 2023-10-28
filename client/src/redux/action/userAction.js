@@ -1,5 +1,6 @@
 import axios from "axios";
-import { CREATE_USER, GET_USER, LOGIN, LOG_OUT } from "../actiontype/actionType";
+import { CREATE_USER, FAIL, GET_USER, LOGIN, LOG_OUT } from "../actiontype/actionType";
+import { alert_error } from "./actionError";
 
 const pathUrl = "http://localhost:7000"
 
@@ -35,6 +36,10 @@ export const addUser = (data,navigate) => async(dispatch) => {
         })
     } catch (error) {
         console.log(error)
+        error.response.data.errors.forEach((el) => {
+            dispatch(alert_error(el.msg));
+          });
+          dispatch({ type: FAIL, payload: error.response.data });
     }
 }
 
@@ -50,6 +55,10 @@ export const loginUser = (data,navigate) => async(dispatch) => {
         })
     } catch (error) {
         console.log(error)
+        error.response.data.errors.forEach((el) => {
+            dispatch(alert_error(el.msg));
+          });
+          dispatch({ type: FAIL, payload: error.response.data });
     }
 }
 

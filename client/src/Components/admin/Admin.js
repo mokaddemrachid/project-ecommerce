@@ -7,6 +7,7 @@ import Add_product from './Add_product';
 import Product_details from './Product_details';
 
 
+
 function Admin() {
 
   const dispatch = useDispatch()
@@ -20,7 +21,7 @@ function Admin() {
       const info = useSelector((state)=>state.productReducer.product)
 
   return (
-  <div>
+  <div>  
     <h1>ADMIN</h1>
     <Add_product product={info} />
     <table className='ProductTable'>

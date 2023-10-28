@@ -15,22 +15,28 @@ import Admin from './Components/admin/Admin';
 import Favoris from './Components/Favoris/Favoris';
 import Succes from './Components/Succes';
 import Cancel from './Components/Cancel';
+import AlertError from './Components/register/AlertError';
+import Contact from './Components/Contact';
+import { useState } from 'react';
 
 
 function App() {
+  const [search, setSearch] = useState("")
+
   return (
     <div className="App">
         
-        <Navs />
-        
+        <Navs setSearch={setSearch}/>
+        <AlertError />
       
    
   
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='/' element={<Home search={search}/>}/>
             <Route path='/Nouveautés' element={<Nouv />}></Route>
             <Route path="/Signup" element={<Signup />}/>
             <Route path="/Signin" element={<SignIn />}/>
+            <Route path="/contact" element = {<Contact />} />
             <Route path='/panier' element={<Panier />}/>
             <Route path='/favoris' element={<Favoris />} />
             <Route path="/Homme" element={<Homme />}/>

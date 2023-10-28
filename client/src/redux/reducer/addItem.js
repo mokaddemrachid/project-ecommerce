@@ -2,17 +2,7 @@ const addItem = [];
 
 const addItems = (state = addItem, action) => {
     switch (action.type) {
-        case "ADDITEM" :
-    //         var x={}
-    //         for(var i=0;i<state.length;i++){
-    //             if( state[i].product._id!==action.payload.product._id){
-    //                 x=   action.payload
-    //               }
-    //         }
-        
-    //             console.log(x)
-    //   return [...state,  x]
-        
+        case "ADDITEM" :  
     const existingItem = state.find((state) => state.product._id === action.payload.product._id);
     console.log(existingItem)
     if (!existingItem) {

@@ -2,10 +2,9 @@ import React, { useEffect } from 'react'
 import './Panier.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { delItem } from '../../redux/action/cartAction';
-import { useNavigate } from 'react-router-dom';
-import { AiOutlineDelete } from 'react-icons/ai'
+import { FaTrashCan } from 'react-icons/fa6'
 import axios from 'axios';
-import Button from 'react-bootstrap/Button';
+import { CiCreditCard2 } from 'react-icons/ci'
 
 
 export default function Panier({ count }) {
@@ -28,7 +27,6 @@ export default function Panier({ count }) {
       }
     }
 
-    const navigate = useNavigate();
 
     console.log(products)
 
@@ -37,11 +35,7 @@ export default function Panier({ count }) {
     }, [products,dispatch]);
 
     var totale=0
-    var totalPrice=0
 
-    const handleClose = (item) => {
-      dispatch(delItem(item));
-    };
     
     return (
       <div className="cart-container">
@@ -81,25 +75,22 @@ export default function Panier({ count }) {
                 <td>
                   <button
                     style={{ background: 'none', border: 'none' }}
-                    onClick={() => dispatch(delItem(product._id))}
+                    onClick={() => dispatch(delItem(product.product._id))}
                   >
-                    <AiOutlineDelete style={{ fontSize: '20px', color: 'blue' }} />
+                    <FaTrashCan style={{ fontSize: '35px', color: 'rgb(255, 90, 90)'}} />
                   </button>
                 </td>
               </tr>
             )})}
           </tbody>
         </table>
-  
+
         <div className="cart-total">
-          Prix Totale: {totale}
+         <p style={{backgroundColor: 'transparent', fontWeight: '600'}}> Totale : <span>{totale}</span></p> 
+          <button className='cartbtn' onClick={checkout}>Continuer
+          <CiCreditCard2 className='CiCreditCard2'/>
+          </button>{' '}
         </div>
-        <button>Continuer</button>
-        <Button 
-      variant="outline-primary"
-      onClick={checkout}>
-        Check Out
-        </Button>{' '}
       </div>
     );
   }

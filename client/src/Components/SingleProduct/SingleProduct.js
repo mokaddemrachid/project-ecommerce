@@ -15,7 +15,7 @@ export default function SingleProduct({data}) {
 
     const dispatch = useDispatch()
     
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -147,7 +147,7 @@ export default function SingleProduct({data}) {
     <div className="product-price">
       {(count <= 1)?
       <span>{singleProduct?.price} DT</span>
-      :<span>{totalPrice} DT</span>}
+      :<span>{totalPrice.toFixed(2)} DT</span>}
       <NavLink to={'/panier'}><button className="cart-btn" onClick={addToCart}>
       Ajout au panier
         </button>{' '}

@@ -43,14 +43,6 @@ export default function ProductCard({product}) {
     }
   };
 
-  const heartStyle = {
-    color: isClicked ? 'red' : 'gray',
-    // Add any other styles you want
-  };
-
-  const addToCart = () => {
-    dispatch(addItem(product))
-  };
 
   return (
     <div>
@@ -83,12 +75,12 @@ export default function ProductCard({product}) {
          <Card.Text style={{textAlign:'center'}}>
              {product.description}
          </Card.Text>
-         <Card.Text style={{textAlign:'center'}}>
+         <Card.Text style={{textAlign:'center', fontWeight: 'bold', fontSize: '1.2em'}}>
              {product.price}
              <span> DT </span>
          </Card.Text>
      <button style={{border:'0'}} onClick={addToFavorites}><TfiHeart   style={{
-    color: isClicked ? 'red' : 'gray',
+    fontColor: isClicked ? 'red' : 'gray',
   }}/></button>
      
      </Card.Body>

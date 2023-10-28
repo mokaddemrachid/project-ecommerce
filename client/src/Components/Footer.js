@@ -19,7 +19,7 @@ export default function Footer() {
         <h2>AIDE</h2>
         <ul>
             <li><a href='#'>Modes de paiement</a></li>
-            <li><a href='#'>Nous contacter</a></li>
+            <li><a href='/contact'>Nous contacter</a></li>
             <li><a href='#'>Expédition et livraison</a></li>
             <li><a href='#'>Retours</a></li>
             <li><a href='#'>Actualités</a></li>

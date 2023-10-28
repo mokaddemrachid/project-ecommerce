@@ -8,3 +8,9 @@ export const LOG_OUT = "LOG_OUT"
 
 export const GET_PRODUCT = "GET_PRODUCT"
 
+export const FAIL = "FAIL"
+
+export const ALERT_ERROR = "ALERT_ERROR"
+
+export const CLEAR_ERROR = "CLEAR_ERROR"
+

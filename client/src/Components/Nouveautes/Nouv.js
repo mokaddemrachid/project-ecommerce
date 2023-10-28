@@ -1,5 +1,6 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import { FaArrowRight } from 'react-icons/fa'
 import './Nouv.css'
 
 
@@ -18,10 +19,25 @@ export default function Nouv() {
     </div>
     <h5 id='artitle'>Plus d'articles</h5>
     <div className='divimg'>   
-        <img className='imgn' src='https://i.pinimg.com/564x/65/12/e1/6512e16e6accc56797fabe711282337f.jpg'></img>
-        <img className='imgn' src='https://i.pinimg.com/564x/27/cd/8d/27cd8dc44d313fffad76a5a86924c059.jpg'></img>
-        <img className='imgn' src='https://i.pinimg.com/564x/2a/3d/db/2a3ddb5a7435ebfebee2b8b4acd69098.jpg'></img>
-    
+    <a href='/femme'>
+      <div style={{position:'relative', display:'inline-block'}}>
+        <img className='imgn' src='https://i.pinimg.com/564x/65/12/e1/6512e16e6accc56797fabe711282337f.jpg' alt='femmes'/>
+        <button className='image-button'>Nouveautés Femmes<FaArrowRight className='iconbtn'/></button>
+      </div>
+    </a>    
+    <a href='/homme'>
+      <div style={{position:'relative', display:'inline-block'}}>
+        <img className='imgn' src='https://i.pinimg.com/564x/27/cd/8d/27cd8dc44d313fffad76a5a86924c059.jpg' alt='hommes'/>
+        <button className='image-button'>Nouveautés Hommes<FaArrowRight className='iconbtn'/></button>
+      </div>
+    </a>
+    <a href='enfant'>
+      <div style={{position:'relative', display:'inline-block'}}>
+        <img className='imgn' src='https://i.pinimg.com/564x/2a/3d/db/2a3ddb5a7435ebfebee2b8b4acd69098.jpg' alt='enfants'/>
+        <button className='image-button'>Nouveautés Enfants<FaArrowRight className='iconbtn'/></button>       
+        </div>  
+    </a>
+ 
     </div>
     </>
   )

@@ -8,7 +8,7 @@ module.exports = {
         try {
             const found = await users.findOne({email})
             if (found){
-                res.status(404).send({message:` ${email} already have an account `})
+                res.status(404).send({errors:[{msg:` ${email} already have an account `}]})
             }
             else {
                 const oneUser = new users(req.body)
@@ -30,12 +30,12 @@ module.exports = {
         try {
             const check = await users.findOne({email})
             if (!check){
-                res.status(404).send({message:`Invalid e-mail adress ${email} you don't have an account`})
+                res.status(404).send({errors:[{msg:`Invalid e-mail adress ${email} you don't have an account`}]})
             }
             else {
                 const compare = bcrypt.compareSync(password, check.password)
                 if (!compare){
-                    res.status(404).send({message:"Wrong password"})
+                    res.status(404).send({errors:[{msg:"Wrong password"}]})
                 }
                 else {
                     const payload = {id:check._id}
